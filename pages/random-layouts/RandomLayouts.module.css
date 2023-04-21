@@ -1,0 +1,42 @@
+.centerMain {
+    margin: auto;
+    width: 750px;
+    border: 1px solid var(--black);
+}
+
+.topSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.middleSection {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.bottomSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemBox {
+    height: 130px;
+    width: 130px;
+    background-color: aqua;
+    border: 10px solid #d1eda7;
+}
+
+.itemColumn {
+    background-color: aqua;
+}
+
+.middleColumn {
+    flex-grow: 1;
+    background-color: var(--testColor);
+}

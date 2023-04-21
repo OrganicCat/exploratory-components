@@ -2,4 +2,7 @@
     --dropdownItem-background: #262d10;
     --dropdownItem-hover-background: #535f2e;
     --white: #fff;
+    --black: #000;
+    --testColor: blueviolet;
+    /* test color used for identifying components and sections easily while developing */
 }
