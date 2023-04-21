@@ -8,7 +8,7 @@ interface FormObject {
     email?: string
 }
 
-export default function Home() {
+export default function FormValidation() {
     const [formData, setFormData] = useState<FormObject>({
         firstName: '',
         lastName: '',

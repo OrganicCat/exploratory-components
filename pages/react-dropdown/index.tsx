@@ -5,7 +5,7 @@ import { getDungeonsAndDragonsClasses } from '@/utilities/utilities'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function ReactDropdownHome() {
     const optionValues = getDungeonsAndDragonsClasses();
     return (
         <>
