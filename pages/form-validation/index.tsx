@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import styles from './FormValidation.module.css';
+import Head from "next/head";
 
 interface FormObject {
     firstName?: string,
@@ -43,6 +44,12 @@ export default function Home() {
 
     return (
         <>
+            <Head>
+                <title>Form Validation</title>
+                <meta name="description" content="Form Validation" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <form onSubmit={handleSubmit}>
                 <div>
                     First Name:
