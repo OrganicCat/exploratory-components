@@ -31,8 +31,6 @@ export default function RandomLayouts() {
                 - use flexbox and grid
             */}
             <main>
-                <h1>Fun clean layouts, with style!</h1>
-
                 <div className={styles.centerMain}>
                     <div className={styles.topSection}>
                         <div className={styles.itemBox}>Top Section</div>

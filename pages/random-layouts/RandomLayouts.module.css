@@ -2,6 +2,7 @@
     margin: auto;
     width: 750px;
     border: 1px solid var(--black);
+    font-family: 'Inter', sans-serif;
 }
 
 .topSection {
@@ -43,6 +44,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.innerItemBox:hover {
+    border: 10px solid #f26d2b;
+    background-color: #ea6f90;
 }
 
 .itemColumn {
