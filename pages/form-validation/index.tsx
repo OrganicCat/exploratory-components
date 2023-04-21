@@ -1,19 +1,18 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 interface FormObject {
-    firstName: string,
-    lastName: string,
-    email: string
+    firstName?: string,
+    lastName?: string,
+    email?: string
 }
 
-
 export default function Home() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormObject>({
         firstName: '',
         lastName: '',
         email: '',
     });
-    const [formErrors, setFormErrors] = useState({
+    const [formErrors, setFormErrors] = useState<FormObject>({
         firstName: '',
         lastName: '',
         email: ''
@@ -26,18 +25,23 @@ export default function Home() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (event: ChangeEvent<HTMLElement>) => {
+    const handleSubmit = (event: FormEvent<HTMLElement>) => {
         // we're not submitting to a server directly (or at all in this case)
         event.preventDefault();
-        let errors = {};
+        let errors: FormObject = {};
         errors = !formData.firstName ? { ...errors, firstName: 'First name is required' } : errors;
         errors = !formData.lastName ? { ...errors, lastName: 'Last name is required' } : errors;
         errors = !formData.email ? { ...errors, email: 'Email is required' } : errors;
         setFormErrors(errors);
 
-        return (
-            <>
+        if (Object.keys(errors).length) return;
+    };
 
-            </>
-        )
-    }
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+
+            </form>
+        </>
+    )
+}
