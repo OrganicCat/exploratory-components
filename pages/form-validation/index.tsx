@@ -33,6 +33,9 @@ export default function Home() {
         errors = !formData.firstName ? { ...errors, firstName: 'First name is required' } : errors;
         errors = !formData.lastName ? { ...errors, lastName: 'Last name is required' } : errors;
         errors = !formData.email ? { ...errors, email: 'Email is required' } : errors;
+        // regex to validate email
+        errors = formData.email && !/\S+@\S+\.\S+/.test(formData.email) ? { ...errors, email: 'Email is invalid' } : errors;
+
         setFormErrors(errors);
 
         if (Object.keys(errors).length) return;
@@ -45,6 +48,16 @@ export default function Home() {
                     First Name:
                     <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
                     {formErrors.firstName && <span className={styles.formErrorColors}>{formErrors.firstName}</span>}
+                </div>
+                <div>
+                    Last Name:
+                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
+                    {formErrors.lastName && <span className={styles.formErrorColors}>{formErrors.lastName}</span>}
+                </div>
+                <div>
+                    Email:
+                    <input type="text" name="email" value={formData.email} onChange={handleChange} />
+                    {formErrors.email && <span className={styles.formErrorColors}>{formErrors.email}</span>}
                 </div>
                 <div>
                     <button type="submit">Submit</button>
