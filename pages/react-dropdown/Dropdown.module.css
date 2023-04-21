@@ -1,0 +1,30 @@
+.parentContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdownContainer {
+    width: 150px;
+    height: 4rem;
+    position: relative;
+}
+
+.dropdown {
+    color: var(--white);
+    user-select: none;
+    width: fit-content;
+    position: absolute;
+    z-index: 999;
+}
+
+.dropdownItem {
+    background-color: var(--dropdownItem-background);
+    color: var(--white);
+    padding: 10px;
+}
+
+.dropdownItem:hover {
+    background-color: var(--dropdownItem-hover-background);
+    cursor: pointer;
+}
