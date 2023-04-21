@@ -1,6 +1,20 @@
 import Head from "next/head";
 import styles from './RandomLayouts.module.css'
 
+// generate 9 dungeons and dragons class objects with names and values in an array
+const dndClasses = [
+    { name: 'Barbarian', value: 'barbarian' },
+    { name: 'Bard', value: 'bard' },
+    { name: 'Cleric', value: 'cleric' },
+    { name: 'Druid', value: 'druid' },
+    { name: 'Fighter', value: 'fighter' },
+    { name: 'Monk', value: 'monk' },
+    { name: 'Paladin', value: 'paladin' },
+    { name: 'Ranger', value: 'ranger' },
+    { name: 'Rogue', value: 'rogue' },
+];
+
+
 export default function RandomLayouts() {
     return (
         <>
@@ -24,15 +38,25 @@ export default function RandomLayouts() {
                         <div className={styles.itemBox}>Top Section</div>
                     </div>
                     <div className={styles.middleSection}>
-                        <div className={`${styles.itemColumn} ${styles.itemBox}`}>Left Column</div>
-                        <div className={`${styles.itemColumn} ${styles.middleColumn}`}>Middle Column</div>
-                        <div className={`${styles.itemColumn} ${styles.itemBox}`}>Right Column</div>
+                        <div className={`${styles.sideColumn}`}>
+                            <div className={styles.itemBox}>Left Column</div>
+                        </div>
+                        <div className={`${styles.itemColumn} ${styles.middleColumn}`}>
+                            {dndClasses.map((dndClass, index) => (
+                                <div key={index} className={styles.innerItemBox}>
+                                    {dndClass.name}
+                                </div>
+                            ))}
+                        </div>
+                        <div className={`${styles.sideColumn}`}>
+                            <div className={styles.itemBox}>Right Column</div>
+                        </div>
                     </div>
                     <div className={styles.bottomSection}>
                         <div className={styles.itemBox}>Bottom Section</div>
                     </div>
                 </div>
-            </main>
+            </main >
         </>
     )
 }
