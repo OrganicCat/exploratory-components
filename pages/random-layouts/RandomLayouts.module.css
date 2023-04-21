@@ -46,6 +46,8 @@
     align-items: center;
 }
 
+
+
 .innerItemBox:hover {
     border: 10px solid #f26d2b;
     background-color: #ea6f90;
@@ -66,4 +68,12 @@
     display: grid;
     grid-template-rows: repeat(3, 150px);
     grid-template-columns: repeat(3, 150px);
+}
+
+
+@media (max-width: 600px) {
+    .middleColumn {
+        display: flex;
+        flex-direction: column;
+    }
 }
