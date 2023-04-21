@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import styles from './FormValidation.module.css';
 
 interface FormObject {
     firstName?: string,
@@ -40,7 +41,14 @@ export default function Home() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-
+                <div>
+                    First Name:
+                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+                    {formErrors.firstName && <span className={styles.formErrorColors}>{formErrors.firstName}</span>}
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </>
     )
