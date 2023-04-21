@@ -40,7 +40,7 @@ export default function RandomLayouts() {
                             <div className={styles.itemBox}>Left Column</div>
                         </div>
                         <div className={`${styles.itemColumn} ${styles.middleColumn}`}>
-                            {dndClasses.map((dndClass, index) => (
+                            {dndClasses && dndClasses.map((dndClass, index) => (
                                 <div key={index} className={styles.innerItemBox}>
                                     {dndClass.name}
                                 </div>
