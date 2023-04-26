@@ -1,0 +1,18 @@
+body {
+    background: lightblue;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+button {
+    padding: 5px;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+}

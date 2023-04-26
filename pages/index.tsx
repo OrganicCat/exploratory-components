@@ -15,7 +15,13 @@ export default function Home() {
             </Head>
             <main>
                 <h1>Welcome to Lee's explatory project landscape!</h1>
-                <Link href="/react-dropdown">React Dropdown</Link>
+                <div>
+                    <Link href="/react-dropdown">React Dropdown</Link>
+                    <br />
+                    <Link href="/random-layouts">Random Layouts</Link>
+                    <br />
+                    <Link href="/render-props">Render Props</Link>
+                </div>
             </main>
         </>
     )
