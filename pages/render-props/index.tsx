@@ -56,13 +56,7 @@ const Field = (props: any) => {
     )
 }
 
-interface RestTypes {
-    [key: string]: string;
-    initialvalues?: any;
-}
-
 const CheckboxGroup = ({ name, options, ...rest }: { name: string, options: string[], initialvalues?: any }) => {
-    console.log(rest)
     const colorValues = rest?.initialvalues?.colors ?? [];
     return (
         <>
