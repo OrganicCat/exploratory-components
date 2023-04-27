@@ -1,9 +1,5 @@
 import React from "react";
 
-interface FormValues {
-    [key: string]: string;
-}
-
 const Form = (props: any) => {
 
     const propChildrenArray = props.children().props.children;

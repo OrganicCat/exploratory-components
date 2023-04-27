@@ -21,6 +21,8 @@ export default function Home() {
                     <Link href="/random-layouts">Random Layouts</Link>
                     <br />
                     <Link href="/render-props">Render Props</Link>
+                    <br />
+                    <Link href="/render-props-replacement">Render Props Replacement</Link>
                 </div>
             </main>
         </>
