@@ -18,6 +18,8 @@ export default function Home() {
                 <div>
                     <Link href="/react-dropdown">React Dropdown</Link>
                     <br />
+                    <Link href="/form-validation">Form Validation</Link>
+                    <br />
                     <Link href="/random-layouts">Random Layouts</Link>
                     <br />
                     <Link href="/render-props">Render Props</Link>

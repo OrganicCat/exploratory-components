@@ -53,17 +53,17 @@ export default function FormValidation() {
             <form onSubmit={handleSubmit}>
                 <div>
                     First Name:
-                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />&nbsp;
                     {formErrors.firstName && <span className={styles.formErrorColors}>{formErrors.firstName}</span>}
                 </div>
                 <div>
                     Last Name:
-                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
+                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />&nbsp;
                     {formErrors.lastName && <span className={styles.formErrorColors}>{formErrors.lastName}</span>}
                 </div>
                 <div>
                     Email:
-                    <input type="text" name="email" value={formData.email} onChange={handleChange} />
+                    <input type="text" name="email" value={formData.email} onChange={handleChange} />&nbsp;
                     {formErrors.email && <span className={styles.formErrorColors}>{formErrors.email}</span>}
                 </div>
                 <div>

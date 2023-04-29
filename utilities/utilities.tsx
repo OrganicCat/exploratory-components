@@ -16,7 +16,7 @@ const DungeonsAndDragonsClasses: DropdownOption[] = [
     { value: 'rogue', label: 'Rogue' },
     { value: 'sorcerer', label: 'Sorcerer' },
     { value: 'warlock', label: 'Warlock' },
-    { value: 'wizard', label: 'Wizard' },
+    { value: 'wizard', label: 'Wizard' }
 ]
 
 export function getDungeonsAndDragonsClasses(): DropdownOption[] {
